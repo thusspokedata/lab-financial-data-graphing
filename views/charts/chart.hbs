@@ -5,35 +5,39 @@
       </h4>
       <form>
         <div>
+          {{!-- ////////////////// FROM ////////////////////////////////// --}}
           <label class="px-2 col-10" for="from">From:</label>
-          <input class="px-2" type="date" id="from" name="from" />
-
+          <input class="px-2 from" type="date" id="from" name="from" />
+          {{!-- ////////////////// TO ////////////////////////////////// --}}
           <label class="px-2" for="to">To:</label>
-          <input class="px-2" type="date" id="to" name="to" />
-        
-          <div class="form-check">
+          <input class="px-2 to" type="date" id="to" name="to" />
+          {{!-- //////////////////  CURRENCY //////////////////////////// --}}
+          <div class="form-check" >
             <input
               class="form-check-input ms-3 "
-              type="checkbox"
+              name="flexRadioDefault"
+              type="radio"
               value="USD"
-              id="flexCheckDefault"
+              id="flexRadioDefault1"
               checked
             />
-            <label class="form-check-label ms-1" for="flexCheckDefault">
+            <label class="form-check-label ms-1" for="flexRadioDefault1">
               US Dollar ($)
             </label>
           </div>
           <div class="form-check">
             <input
               class="form-check-input ms-3"
-              type="checkbox"
+              name="flexRadioDefault"
+              type="radio"
               value="EUR"
-              id="flexCheckChecked"
+              id="flexRadioDefault2"
             />
-            <label class="form-check-label ms-1" for="flexCheckChecked">
+            <label class="form-check-label ms-1" for="flexRadioDefault2">
               EUR (€)
             </label>
-            <input class="mx-3 btn btn-primary text-white" id="boton" type="submit" />
+            {{!-- //////////////////  BUTTON //////////////////////////// --}}
+            <input class="mx-3 btn btn-primary text-white" id="button" type="submit" />
           </div>
         </div>
       </form>
@@ -52,17 +56,6 @@
   </div>
 </div>
 
-{{! <form>
-    <label>Start:</label>
-    <input type="date" name="start" onchange="handleStartDateChange(event)" />
-    <label>End:</label>
-    <input type="date" name="end" onchange="handleEndDateChange(event)" />
-    <label>Currency:</label>
-    <select name="currency" onchange="handleCurrencyChange(event)">
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-    </select>
-  </form> }}
 <div class="container">
   <canvas id="myChart"></canvas>
 </div>
