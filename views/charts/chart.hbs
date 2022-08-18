@@ -1,0 +1,68 @@
+<div class="container d-grid">
+  <div class="row">
+    <div class="col-12 col-sm-10">
+      <h4 class="">Filters
+      </h4>
+      <form>
+        <div>
+          <label class="px-2 col-10" for="from">From:</label>
+          <input class="px-2" type="date" id="from" name="from" />
+
+          <label class="px-2" for="to">To:</label>
+          <input class="px-2" type="date" id="to" name="to" />
+        
+          <div class="form-check">
+            <input
+              class="form-check-input ms-3 "
+              type="checkbox"
+              value="USD"
+              id="flexCheckDefault"
+              checked
+            />
+            <label class="form-check-label ms-1" for="flexCheckDefault">
+              US Dollar ($)
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input ms-3"
+              type="checkbox"
+              value="EUR"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label ms-1" for="flexCheckChecked">
+              EUR (€)
+            </label>
+            <input class="mx-3 btn btn-primary text-white" id="boton" type="submit" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-2 text-end">
+      <h4 class="">Values
+      </h4>
+      <h5>
+        Max: <h5 id="min"></h5>
+      </h5>
+      <h5>
+        Max: <h5 id="max"></h5>
+      </h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{! <form>
+    <label>Start:</label>
+    <input type="date" name="start" onchange="handleStartDateChange(event)" />
+    <label>End:</label>
+    <input type="date" name="end" onchange="handleEndDateChange(event)" />
+    <label>Currency:</label>
+    <select name="currency" onchange="handleCurrencyChange(event)">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </form> }}
+<div class="container">
+  <canvas id="myChart"></canvas>
+</div>
